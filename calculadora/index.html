@@ -1,0 +1,92 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La calculadora viral · Sergio Suárez</title><link rel="stylesheet" href="../estilo.css"><style>
+.paso{background:#fff;border-radius:22px;padding:22px 18px;box-shadow:0 12px 26px rgba(44,47,20,.1);margin-bottom:16px}
+.paso h2{font-family:"Arial Black",Arial;font-size:21px;margin:0 0 4px}.paso h2 i{font-family:Georgia,serif;color:var(--am)}
+.paso .s{color:var(--su);margin:0 0 6px;font-size:14.5px}
+label{display:flex;align-items:center;gap:8px;font-family:"Arial Black",Arial;font-size:12px;letter-spacing:.06em;margin:18px 0 7px}
+label b{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--am);color:#fff;font-size:11px}
+input,textarea{width:100%;padding:13px 14px;border:2px solid #E3E5D2;border-radius:12px;font:16px Arimo,Helvetica,Arial,sans-serif;background:var(--cr);transition:border-color .2s,transform .2s}
+textarea{min-height:90px;resize:vertical}input:focus,textarea:focus{outline:0;border-color:var(--am);transform:scale(1.01)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chips span{padding:9px 13px;border-radius:999px;border:2px solid #E3E5D2;background:var(--cr);font-size:14px;cursor:pointer;transition:all .2s}
+.chips span.on{background:var(--am);border-color:var(--am);color:#fff;transform:rotate(-2deg) scale(1.05)}
+button{width:100%;margin-top:18px;padding:16px;border:0;border-radius:14px;background:var(--am);color:#fff;font-family:"Arial Black",Arial;font-size:17px;cursor:pointer;box-shadow:0 5px 0 var(--tx);animation:late 2.4s 2s ease-in-out infinite}
+@keyframes late{0%,100%{transform:scale(1)}8%{transform:scale(1.035)}16%{transform:scale(1)}}
+.aviso{font-size:11.5px;color:#9a9c86;text-align:center;margin:10px 0 0}
+.calc{display:inline-block;background:#fff;color:var(--tx);border-radius:14px;padding:12px;width:150px;box-shadow:0 18px 40px rgba(0,0,0,.35);transform:rotate(-5deg);animation:flota 5s ease-in-out infinite;position:relative;margin-top:14px}
+.calc .pant{background:var(--lz);border-radius:8px;padding:8px;text-align:right;font-family:"Arial Black",Arial;font-size:26px;color:var(--am)}
+.calc .tec{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}.calc .tec i{height:22px;border-radius:6px;background:var(--cr)}
+.calc .tec i:nth-child(3n){background:var(--cl)}
+/* resultado */
+#res{display:none}.nota{text-align:center;padding:26px 18px}
+.aro{position:relative;width:170px;height:170px;margin:0 auto}.aro svg{transform:rotate(-90deg)}
+.aro b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:"Arial Black",Arial;font-size:46px;color:var(--am)}
+.veredicto{display:inline-block;margin-top:12px;background:var(--lz);border:2px solid var(--tx);border-radius:10px;padding:7px 12px;font-family:"Arial Black",Arial;transform:rotate(-3deg)}
+.item{display:flex;gap:12px;padding:14px 0;border-top:1px solid #EEF0E2}.item:first-child{border-top:0}
+.sem{flex:none;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px}
+.v{background:#E4E8C8}.a{background:#F6E7B8}.r{background:#F3D3C8}
+.item h3{margin:0 0 3px;font-family:"Arial Black",Arial;font-size:15px}.item p{margin:0;color:var(--su);font-size:14.5px;line-height:1.45}
+.club{background:var(--tx);color:#fff;border-radius:22px;padding:22px 20px;position:relative;overflow:hidden}
+.club h3{font-family:"Arial Black",Arial;font-size:22px;margin:8px 0}.club h3 i{font-family:Georgia,serif;color:var(--cl)}
+.club .tag{display:inline-block;background:var(--cl);color:var(--tx);font-weight:700;font-size:12px;padding:4px 10px;border-radius:999px}
+.club a{display:block;text-align:center;margin-top:14px;padding:15px;border-radius:14px;background:var(--cl);color:var(--tx);font-family:"Arial Black",Arial;text-decoration:none;box-shadow:0 5px 0 #000}
+.carga{display:none;text-align:center;padding:40px 18px}.carga .calc{animation:flota 1.2s ease-in-out infinite;margin:0 0 18px}
+.carga .tec i{animation:pulso 1s infinite}.carga .tec i:nth-child(2){animation-delay:.15s}.carga .tec i:nth-child(3){animation-delay:.3s}.carga .tec i:nth-child(4){animation-delay:.45s}.carga .tec i:nth-child(5){animation-delay:.6s}.carga .tec i:nth-child(6){animation-delay:.75s}
+@keyframes pulso{50%{background:var(--am)}}.carga p{font-family:Georgia,serif;font-style:italic;color:var(--am);font-size:19px;min-height:26px}
+.err{color:#9b3b2a;text-align:center;font-weight:700;margin:12px 0 0;min-height:1em}
+.usada{text-align:center}.usada a{color:var(--am);font-weight:700}
+.legal{font-size:11.5px;color:#9a9c86;text-align:center}.legal a{color:inherit}
+</style></head><body>
+<section class="hero"><div class="top"><a href="../">← SERGIO SUÁREZ</a><span>LA CALCULADORA</span></div>
+<svg class="estrella" viewBox="0 0 100 100"><path d="M50 4 61 38 97 38 68 59 79 94 50 72 21 94 32 59 3 38 39 38Z" fill="none" stroke="#E4E8C8" stroke-width="1.5"/></svg>
+<div class="hola">antes de grabar 🎬</div><h1>La <span>calculadora</span> viral</h1>
+<p>¿Va a funcionar tu vídeo? Pégame tu gancho y tu guion y te digo, punto por punto, si engancha y qué cambiar.</p>
+<div class="calc"><div class="pant" id="pant">87</div><div class="tec"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sticker" style="right:-40px;bottom:-14px">¿viral? 🔥</div></div>
+</section>
+<div class="marq"><div>GANCHO ★ FILTRO 5/50 ★ ESTRUCTURA ★ RETENCIÓN ★ CTA ★ GANCHO ★ FILTRO 5/50 ★ ESTRUCTURA ★ RETENCIÓN ★ CTA ★&nbsp;</div></div>
+<div class="w">
+<form id="f" class="paso"><h2>Tu <i>vídeo</i></h2><p class="s">Cuanto más concreto, mejor diagnóstico. <mark>Un análisis por cuenta</mark> ⭐</p>
+<label><b>1</b>TU INSTAGRAM</label><input name="ig" placeholder="@tucuenta" required>
+<label><b>2</b>DE QUÉ VA TU CUENTA</label><input name="cuenta" placeholder="Ej.: peluquería en Alicante" required>
+<label><b>3</b>A QUIÉN LE HABLAS</label><input name="publico" placeholder="Ej.: mujeres de 30 a 50 que quieren cuidarse el pelo" required>
+<label><b>4</b>LO PRIMERO QUE VAS A DECIR</label><textarea name="gancho" placeholder="Tu gancho, tal cual lo vas a decir" required style="min-height:60px"></textarea>
+<label><b>5</b>TU GUION</label><textarea name="guion" placeholder="Pega aquí el resto del guion" required></textarea>
+<label><b>6</b>CÓMO LO VAS A GRABAR</label><div class="chips" data-campo="formato"><span class="on">Hablando a cámara</span><span>Voz en off</span><span>Vlog</span><span>POV</span><span>Tutorial</span><span>Entrevista</span></div>
+<label><b>7</b>¿SALE DE UN VÍDEO QUE YA FUE VIRAL?</label><div class="chips" data-campo="viral"><span>Sí</span><span class="on">No</span></div>
+<label><b>8</b>TU NOMBRE Y TU EMAIL</label><input name="nombre" placeholder="Tu nombre" required><input name="email" type="email" placeholder="tu@email.com" required style="margin-top:8px">
+<button>Analizar mi vídeo →</button>
+<p class="err" id="err"></p><p class="aviso">Te llegará el resultado y mis emails. Te das de baja con un clic. <a href="../legal/privacidad/" style="color:inherit">Privacidad</a>.</p></form>
+<div class="paso carga" id="carga"><div class="calc"><div class="pant">…</div><div class="tec"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><p id="msg">Leyendo tu gancho…</p></div>
+<div class="paso usada" id="usada" style="display:none"><h2>Ya la has <i style="font-family:Georgia,serif;color:var(--am)">usado</i> ⭐</h2><p class="s">La calculadora es de un uso por cuenta. Mientras, tienes todas mis guías gratis en la <a href="../biblioteca/?de=calculadora">biblioteca →</a></p></div>
+
+<div id="res"><div class="paso nota"><div class="aro"><svg width="170" height="170"><circle cx="85" cy="85" r="74" stroke="#EEF0E2" stroke-width="14" fill="none"/><circle id="arc" cx="85" cy="85" r="74" stroke="#5A5D2F" stroke-width="14" fill="none" stroke-linecap="round" stroke-dasharray="465" stroke-dashoffset="465" style="transition:stroke-dashoffset 1.4s cubic-bezier(.2,.8,.2,1)"/></svg><b id="num">0</b></div>
+<div class="veredicto" id="ver">Tiene potencial 🔥</div></div>
+<div class="paso" id="items"></div>
+<div class="club"><span class="tag">¿Quieres que te escriba el gancho?</span><h3>La IA de Hooks, <i>en el Club</i></h3><p style="opacity:.85;margin:0">Dentro de Club Desde Cero tienes la IA que te da ganchos virales para tus vídeos, y cada sábado reviso cuentas en directo.</p><a href="https://www.skool.com/club-desde-cero-1431?de=calculadora">Entrar en Club Desde Cero →</a></div>
+<p class="firma">Si yo puedo, tú puedes.</p></div>
+</div>
+<script>
+document.querySelectorAll('.chips').forEach(c=>c.onclick=e=>{if(e.target.tagName!='SPAN')return;c.querySelectorAll('span').forEach(s=>s.classList.remove('on'));e.target.classList.add('on')});
+function pinta(r){f.style.display='none';res.style.display='block';var n=r.nota;
+ requestAnimationFrame(()=>{arc.style.strokeDashoffset=465*(1-n/100)});var t0=performance.now();(function g(){var p=Math.min((performance.now()-t0)/1400,1);num.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(g)})();
+ ver.textContent=r.veredicto;items.innerHTML=r.puntos.map(p=>'<div class="item"><div class="sem '+p.c+'">'+({v:'✓',a:'!',r:'✕'})[p.c]+'</div><div><h3>'+p.t+'</h3><p>'+p.x+'</p></div></div>').join('');scrollTo(0,0)}
+var API=location.hostname==="guias.sergiosuarezmp.com"?"/api/calculadora/":"https://calculadora-viral.sergiosuarezmp.workers.dev/";
+var ML="https://assets.mailerlite.com/jsonp/2784457/forms/203759816502412715/subscribe";
+var q=new URLSearchParams(location.search);
+function lee(k){try{return localStorage.getItem(k)}catch(e){return null}}function guarda(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+var prev=lee("calc-ss-resultado");
+if(q.has("demo"))pinta({nota:72,veredicto:"Tiene potencial 🔥",puntos:[{c:"a",t:"Gancho",x:"Se entiende, pero habla de ti («Hoy os enseño…»). Gira el foco hacia quien te ve: su problema primero."},{c:"v",t:"Filtro 5/50",x:"Lo entendería un niño de 5 años y le interesa a más de la mitad de tu público."},{c:"a",t:"Estructura",x:"Tienes desarrollo y CTA, pero falta la moraleja: la frase que se queda."},{c:"r",t:"Retención",x:"Tres ideas en un vídeo. Quédate con una y corta lo demás."},{c:"v",t:"CTA",x:"Claro y con razón para hacerlo. Bien."}]});
+else if(prev&&!q.has("otra")){try{pinta(JSON.parse(prev));usada.style.display="block"}catch(e){}}
+var MSG=["Leyendo tu gancho…","Pasando el filtro 5/50…","Midiendo la retención…","Revisando tu CTA…","Calculando la nota…"];
+f.onsubmit=function(e){e.preventDefault();err.textContent="";
+ var d={};new FormData(f).forEach(function(v,k){d[k]=String(v).trim()});
+ d.ig="@"+d.ig.replace(/^@+/,"").toLowerCase();
+ f.querySelectorAll(".chips").forEach(function(c){d[c.dataset.campo]=c.querySelector(".on").textContent});
+ if(lee("calc-ss-ig")===d.ig&&!q.has("otra")){f.style.display="none";usada.style.display="block";return}
+ var m=new FormData();m.append("fields[email]",d.email);m.append("fields[name]",d.nombre);m.append("fields[guia]","calculadora");m.append("ml-submit","1");m.append("anticsrf","true");
+ fetch(ML,{method:"POST",body:m,mode:"no-cors"}).catch(function(){});
+ f.style.display="none";carga.style.display="block";scrollTo(0,carga.offsetTop-20);var i=0,iv=setInterval(function(){msg.textContent=MSG[++i%MSG.length]},1800);
+ fetch(API,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(d)}).then(function(r){return r.json()}).then(function(r){clearInterval(iv);carga.style.display="none";
+   if(!r||r.error||typeof r.nota!=="number")throw new Error(r&&r.error||"Error");
+   guarda("calc-ss-ig",d.ig);guarda("calc-ss-resultado",JSON.stringify(r));pinta(r)})
+ .catch(function(x){clearInterval(iv);carga.style.display="none";f.style.display="block";err.textContent=(x&&x.message&&x.message!=="Error"?x.message:"No he podido analizarlo. Prueba otra vez en un rato.")})};
+</script><script src="../anim.js"></script></body></html>

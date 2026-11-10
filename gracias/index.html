@@ -29,6 +29,8 @@ a.dl .e{font-size:30px}a.dl b{font-family:"Arial Black",Arial;font-size:17px;dis
 <a href="https://www.skool.com/club-desde-cero-1431?de=gracias">Entrar en Club Desde Cero →</a></div>
 <p class="firma">Si yo puedo, tú puedes.</p></div>
 <script>var G={hooks:["🎣","Carpeta de HOOKS","100 ganchos: 50 estratégicos y 50 estructuras virales"],guiones:["✍️","Cómo escribir un guion viral","La estructura y el filtro 5/50, en 2 páginas"],ideas:["💡","El Baúl de Ideas Infinitas","Nunca más «no sé qué publicar»"],bio:["👤","Optimiza tu bio de Instagram","La estructura de 4 pasos para que te sigan"],formatos:["📱","Estrategia Instagram 2026","Para qué sirve cada formato"],algoritmo:["⚙️","Máster Algoritmo 2026","Cómo decide Instagram a quién enseña tu vídeo"],novedades:["🆕","Novedades de Instagram","Lo último que ha cambiado"]};
-var q=new URLSearchParams(location.search),k=q.get("g")||"hooks",g=G[k]||G.hooks;i.textContent=g[0];t.textContent=g[1];dl.href="../guias/"+k+".pdf";
+G.biblioteca=["📚","Mi biblioteca","Todas mis guías gratis"];G.calculadora=["🧮","Mi biblioteca","Todas mis guías gratis"];
+var q=new URLSearchParams(location.search),k=q.get("g")||"hooks",g=G[k]||G.hooks;i.textContent=g[0];t.textContent=g[1];
+if(k==="biblioteca"||k==="calculadora"){dl.href="../biblioteca/";dl.querySelector("b").textContent="Entrar en la biblioteca";dl.querySelector("small").textContent="Todas las guías, gratis"}else dl.href="../guias/"+(G[k]?k:"hooks")+".pdf";
 if(q.get("t")===null){var c=["#5A5D2F","#878B4D","#A8B26B","#E4E8C8"];for(var n=0;n<60;n++){var s=document.createElement("i");s.className="conf";s.style.left=Math.random()*100+"vw";s.style.background=c[n%4];s.style.animationDelay=Math.random()*.8+"s";document.body.appendChild(s)}}</script>
 <script src="../anim.js"></script></body></html>

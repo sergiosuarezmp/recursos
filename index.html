@@ -37,6 +37,11 @@ a.card.yt{background:#fff;color:var(--tx)}a.card.yt .ir{color:var(--am)}
 .firma{margin-top:26px;text-align:center;font-family:"Arial Black",Arial;color:var(--am)}
 .ent{opacity:0;animation:sube .7s cubic-bezier(.2,.8,.2,1) forwards}@keyframes sube{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important}}
+.calcard{background:var(--lz);color:var(--tx)}.calcard .ir{color:var(--am)}.calcard .tag{background:var(--am);color:#fff}.calcard h2 i{color:var(--am)}
+.minicalc{float:right;width:96px;background:#fff;border-radius:12px;padding:8px;margin:-4px 0 8px 12px;box-shadow:0 10px 22px rgba(44,47,20,.2);transform:rotate(6deg);animation:flota 4s ease-in-out infinite}
+.minicalc .pant{background:var(--lz);border-radius:6px;padding:4px 6px;text-align:right;font-family:"Arial Black",Arial;color:var(--am);font-size:18px}
+.minicalc .tec{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:5px}.minicalc .tec i{height:12px;border-radius:4px;background:var(--cr)}.minicalc .tec i:nth-child(3n){background:var(--cl)}
+.calcard:hover .minicalc .tec i{animation:pulso .8s infinite}@keyframes pulso{50%{background:var(--am)}}
 </style></head><body>
 <section class="hero">
 <div class="top"><span>SERGIO SUÁREZ</span><span>@SERGIOSUAREZMP</span></div>
@@ -51,6 +56,8 @@ a.card.yt{background:#fff;color:var(--tx)}a.card.yt .ir{color:var(--am)}
 <div class="datos"><div><b data-n="937" data-suf="K">937K</b><small>visitas en mi reel viral</small></div><div><b data-n="1.9" data-d="1" data-suf=" M">1,9 M</b><small>visitas de un cliente en 30 días</small></div><div><b data-n="11" data-pre="+" data-suf=" años">+11 años</b><small>creando contenido</small></div></div>
 <a class="card" href="biblioteca/?de=bio"><div class="fan"><span>100 hooks<em>que funcionan</em></span><span>Guion viral<em>en 2 páginas</em></span><span>Baúl de ideas<em>infinitas</em></span></div>
 <span class="tag">GRATIS</span><h2>Mi biblioteca <i>de guías</i></h2><p>Hooks, guiones, bio, ideas y algoritmo. Elige la tuya y te llega al momento.</p><span class="ir">Entrar →</span></a>
+<a class="card calcard" href="calculadora/?de=bio"><div class="minicalc"><div class="pant"><span data-n="87">87</span></div><div class="tec"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+<span class="tag">NUEVO · IA</span><h2>La calculadora <i>viral</i></h2><p>Pega tu gancho y tu guion: la IA te dice si engancha y qué cambiar, antes de grabar.</p><span class="ir">Probarla →</span></a>
 <a class="card yt" href="https://www.youtube.com/playlist?list=PL8ovHpvOz4dV_n8ylcKnlSpse8P7zxPI8"><span class="tag">YOUTUBE</span><h2>Curso gratis</h2><p>19 vídeos para empezar en Instagram desde cero.</p><span class="ir">Verlo →</span></a>
 <p class="firma">Si yo puedo, tú puedes.</p>
 </div><script src="anim.js"></script></body></html>

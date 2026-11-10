@@ -1,53 +1,34 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>¡Ya es tuya! · Sergio Suárez</title><style>
-:root{--am:#5A5D2F;--neg:#FFFFFF;--gr:#F3F4EA;--tx:#2C2F14;--su:#6b6d55;--ac:#878B4D}
-*{box-sizing:border-box}body{margin:0;background:var(--neg);color:var(--tx);font-family:Arimo,Helvetica,Arial,sans-serif}
-.w{max-width:480px;margin:0 auto;padding:32px 16px 48px;text-align:center}
-img.f{width:112px;height:112px;border-radius:50%;border:3px solid var(--am);object-fit:cover}
-h1{font-family:"Arial Black",Arial,sans-serif;font-size:28px;margin:14px 0 4px}h1 span{color:var(--am)}
-.sub{color:var(--su);font-size:15px;line-height:1.45;margin:0 0 18px}
-.datos{display:flex;gap:8px;justify-content:center;margin:0 0 26px}.datos div{background:var(--gr);border-radius:12px;padding:10px 8px;flex:1}
-.datos b{display:block;font-family:"Arial Black",Arial;color:var(--am);font-size:18px}.datos small{color:var(--su);font-size:11.5px}
-a.card{display:block;text-decoration:none;color:var(--tx);background:var(--gr);border:1px solid #E3E5D2;border-radius:16px;padding:18px;margin:0 0 12px;text-align:left}
-a.card.top{background:var(--am);color:#fff;border:0}
-.card .e{font-size:26px;float:left;margin-right:12px}.card b{font-family:"Arial Black",Arial;font-size:17px;display:block}.card small{font-size:13.5px;opacity:.8}
-.firma{margin-top:26px;font-family:"Arial Black",Arial;color:var(--am)}
-
-.btn{display:inline-block;margin-top:10px;background:var(--am);color:#fff;font-weight:700;font-size:13px;padding:7px 12px;border-radius:999px}
-.vol{display:block;text-align:left;color:var(--su);text-decoration:none;font-size:14px;margin:0 0 16px}
-
-.ent{opacity:0;animation:sube .6s cubic-bezier(.2,.8,.2,1) forwards}
-@keyframes sube{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-a.card{transition:transform .2s,box-shadow .2s}a.card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(44,47,20,.15)}
-a.card.top{animation:sube .6s cubic-bezier(.2,.8,.2,1) forwards,late 2.4s 1.6s ease-in-out infinite}
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>¡Ya es tuya! · Sergio Suárez</title><link rel="stylesheet" href="../estilo.css"><style>
+.check{width:78px;height:78px;border-radius:50%;background:var(--lz);color:var(--am);font-size:44px;line-height:78px;margin:0 auto 6px;font-weight:700;animation:pop .6s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes pop{from{transform:scale(0) rotate(-90deg)}to{transform:scale(1)}}
+.portada{margin-top:16px;width:170px;height:200px}
+a.dl{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;background:var(--am);border-radius:20px;padding:18px;box-shadow:0 5px 0 var(--tx);animation:sube .7s forwards,late 2.4s 2s ease-in-out infinite}
+a.dl .e{font-size:30px}a.dl b{font-family:"Arial Black",Arial;font-size:17px;display:block}a.dl small{color:var(--lz)}
 @keyframes late{0%,100%{transform:scale(1)}8%{transform:scale(1.035)}16%{transform:scale(1)}}
-@media (prefers-reduced-motion:reduce){.ent,a.card.top{animation:none;opacity:1}}
-
-.guia{background:var(--gr);border-radius:20px;padding:26px 20px;margin:8px 0 18px}.guia .ico{font-size:52px}
-.guia h2{font-family:"Arial Black",Arial;font-size:22px;margin:10px 0 6px;color:var(--tx)}
-form{text-align:left}label{font-size:14px;font-weight:700;display:block;margin:12px 0 6px}
-input{width:100%;padding:14px;border:2px solid #E3E5D2;border-radius:12px;font-size:16px}input:focus{outline:0;border-color:var(--am)}
-button{width:100%;margin-top:16px;padding:16px;border:0;border-radius:14px;background:var(--am);color:#fff;font-family:"Arial Black",Arial;font-size:17px;cursor:pointer}
-.ok{font-size:12.5px;color:var(--su);margin-top:10px;display:flex;gap:8px;align-items:flex-start}.ok input{width:auto;margin-top:2px}
-.check{width:84px;height:84px;border-radius:50%;background:var(--am);color:#fff;font-size:46px;line-height:84px;margin:6px auto 0;animation:pop .6s cubic-bezier(.2,1.6,.4,1) both;opacity:1!important}
-@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
-.club{background:#2C2F14;color:#fff;border-radius:20px;padding:24px 20px;text-align:left;margin-top:22px}
-.club .tag{display:inline-block;background:#A8B26B;color:#2C2F14;font-weight:700;font-size:12px;padding:4px 10px;border-radius:999px}
-.club h3{font-family:"Arial Black",Arial;font-size:21px;margin:10px 0 8px}.club li{margin:6px 0;font-size:14.5px}
-.club a{display:block;text-align:center;margin-top:16px;padding:15px;border-radius:14px;background:#A8B26B;color:#2C2F14;font-family:"Arial Black",Arial;text-decoration:none}
-.conf{position:fixed;top:-10px;width:8px;height:14px;border-radius:2px;animation:cae 2.6s linear forwards}
+.club{position:relative;overflow:hidden;background:var(--tx);color:#fff;border-radius:22px;padding:24px 20px;margin-top:22px}
+.club .estrella{right:-50px;top:-40px;width:160px;height:160px;opacity:.25}
+.club .tag{display:inline-block;background:var(--cl);color:var(--tx);font-weight:700;font-size:12px;padding:4px 10px;border-radius:999px}
+.club h3{font-family:"Arial Black",Arial;font-size:24px;margin:10px 0 8px}.club h3 i{font-family:Georgia,serif;color:var(--cl)}
+.club ul{padding-left:0;list-style:none}.club li{margin:8px 0;font-size:14.5px}
+.club a{display:block;text-align:center;margin-top:16px;padding:15px;border-radius:14px;background:var(--cl);color:var(--tx);font-family:"Arial Black",Arial;text-decoration:none;box-shadow:0 5px 0 #000;transition:transform .1s}
+.club a:active{transform:translateY(4px)}
+.conf{position:fixed;top:-10px;width:8px;height:14px;border-radius:2px;animation:cae 2.6s linear forwards;z-index:9}
 @keyframes cae{to{transform:translateY(105vh) rotate(540deg)}}
-</style></head><body><div class="w">
-<div class="check">✓</div>
-<h1>¡Ya es <span>tuya</span>!</h1>
-<p class="sub">Te la he enviado también a tu email. Descárgala aquí 👇</p>
-<a class="card top" id="dl" href="#" download><span class="e" id="i"></span><b id="t"></b><small>Descargar PDF</small></a>
-<div class="club"><span class="tag">¿Quieres ir más rápido?</span>
-<h3>Club Desde Cero</h3>
+</style></head><body>
+<section class="hero"><div class="top"><span>SERGIO SUÁREZ</span><span>@SERGIOSUAREZMP</span></div><svg class="estrella" viewBox="0 0 100 100"><path d="M50 4 61 38 97 38 68 59 79 94 50 72 21 94 32 59 3 38 39 38Z" fill="none" stroke="#E4E8C8" stroke-width="1.5"/></svg><svg class="estrella izq" viewBox="0 0 100 100"><path d="M50 4 61 38 97 38 68 59 79 94 50 72 21 94 32 59 3 38 39 38Z" fill="none" stroke="#E4E8C8" stroke-width="1.5"/></svg>
+<div class="check">✓</div><h1>¡Ya es <span>tuya</span>!</h1><p>Te la he enviado también a tu email.</p>
+<div class="portada"><span class="cinta"></span><div class="ico" id="i"></div><b id="t"></b><span class="raya"></span><div class="sticker">¡TUYA! ✌️</div></div>
+</section>
+<div class="marq"><div>CLUB DESDE CERO ★ CONTENIDO SIN MIEDO ★ SI YO PUEDO, TÚ PUEDES ★ MARCA PERSONAL ★ GUÍAS GRATIS ★ CLUB DESDE CERO ★ CONTENIDO SIN MIEDO ★ SI YO PUEDO, TÚ PUEDES ★ MARCA PERSONAL ★ GUÍAS GRATIS ★&nbsp;</div></div>
+<div class="w">
+<a class="dl" id="dl" href="#"><span class="e">⬇️</span><div><b>Descargar mi guía</b><small>PDF · gratis</small></div></a>
+<div class="club"><svg class="estrella" viewBox="0 0 100 100"><path d="M50 4 61 38 97 38 68 59 79 94 50 72 21 94 32 59 3 38 39 38Z" fill="none" stroke="#E4E8C8" stroke-width="1.5"/></svg><span class="tag">¿Quieres ir más rápido?</span>
+<h3>Club <i>Desde Cero</i></h3>
 <p style="margin:0 0 8px;opacity:.85">La guía es el primer paso. En el Club te acompaño hasta tener contenido con visitas:</p>
 <ul><li>📚 Formación paso a paso, de cero a tu primer reel con visitas</li><li>🎯 La IA de Hooks Virales (solo para miembros)</li><li>🎥 Mentoría en directo cada sábado</li><li>👥 Comunidad de emprendedores como tú</li></ul>
 <a href="https://www.skool.com/club-desde-cero-1431?de=gracias">Entrar en Club Desde Cero →</a></div>
 <p class="firma">Si yo puedo, tú puedes.</p></div>
 <script>var G={hooks:["🎣","Carpeta de HOOKS","100 ganchos: 50 estratégicos y 50 estructuras virales"],guiones:["✍️","Cómo escribir un guion viral","La estructura y el filtro 5/50, en 2 páginas"],ideas:["💡","El Baúl de Ideas Infinitas","Nunca más «no sé qué publicar»"],bio:["👤","Optimiza tu bio de Instagram","La estructura de 4 pasos para que te sigan"],formatos:["📱","Estrategia Instagram 2026","Para qué sirve cada formato"],algoritmo:["⚙️","Máster Algoritmo 2026","Cómo decide Instagram a quién enseña tu vídeo"],novedades:["🆕","Novedades de Instagram","Lo último que ha cambiado"]};
-var q=new URLSearchParams(location.search),g=G[q.get("g")]||G.hooks;i.textContent=g[0];t.textContent=g[1];dl.href="../guias/"+(q.get("g")||"hooks")+".pdf";
-var c=["#5A5D2F","#878B4D","#A8B26B","#2C2F14"];for(var k=0;k<60;k++){var s=document.createElement("i");s.className="conf";s.style.left=Math.random()*100+"vw";s.style.background=c[k%4];s.style.animationDelay=Math.random()*.8+"s";document.body.appendChild(s)}</script>
+var q=new URLSearchParams(location.search),k=q.get("g")||"hooks",g=G[k]||G.hooks;i.textContent=g[0];t.textContent=g[1];dl.href="../guias/"+k+".pdf";
+if(q.get("t")===null){var c=["#5A5D2F","#878B4D","#A8B26B","#E4E8C8"];for(var n=0;n<60;n++){var s=document.createElement("i");s.className="conf";s.style.left=Math.random()*100+"vw";s.style.background=c[n%4];s.style.animationDelay=Math.random()*.8+"s";document.body.appendChild(s)}}</script>
 <script src="../anim.js"></script></body></html>

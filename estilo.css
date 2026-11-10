@@ -1,0 +1,27 @@
+/* Estilo común v3 (motion graphics) para biblioteca, guía y gracias */
+:root{--am:#5A5D2F;--tx:#2C2F14;--su:#6b6d55;--ac:#878B4D;--cl:#A8B26B;--cr:#F7F6EE;--lz:#E4E8C8}
+*{box-sizing:border-box}body{margin:0;background:var(--cr);color:var(--tx);font-family:Arimo,Helvetica,Arial,sans-serif;overflow-x:hidden}
+.hero{position:relative;background:var(--am);padding:26px 16px 64px;text-align:center;overflow:hidden;color:#fff}
+.top{display:flex;justify-content:space-between;max-width:480px;margin:0 auto 20px;color:var(--lz);font-family:"Arial Black",Arial;font-size:12px;letter-spacing:.08em}
+.top a{color:var(--lz);text-decoration:none}
+.estrella{position:absolute;right:-40px;top:30px;width:180px;height:180px;opacity:.35;animation:gira 22s linear infinite}
+.estrella.izq{left:-50px;right:auto;top:auto;bottom:-30px;width:130px;height:130px;animation-direction:reverse}
+@keyframes gira{to{transform:rotate(360deg)}}
+.hola{font-family:Georgia,serif;font-style:italic;color:var(--lz);font-size:20px}
+h1{font-family:"Arial Black",Arial;font-size:38px;line-height:1.02;margin:4px 0 10px}h1 span{font-family:Georgia,serif;font-style:italic;font-weight:700;color:var(--lz)}
+.hero p{max-width:400px;margin:0 auto;opacity:.85;line-height:1.45}
+.portada{position:relative;display:inline-block;width:190px;height:230px;background:#fff;color:var(--tx);border-radius:8px;padding:18px 16px;text-align:left;box-shadow:0 18px 40px rgba(0,0,0,.35);transform:rotate(-4deg);animation:flota 5s ease-in-out infinite}
+.portada .ico{font-size:44px}.portada b{display:block;font-family:"Arial Black",Arial;font-size:18px;line-height:1.1;margin:10px 0 6px}
+.portada em{font-family:Georgia,serif;color:var(--am);font-size:13px}.portada .raya{position:absolute;left:16px;right:16px;bottom:18px;height:6px;border-radius:3px;background:var(--lz)}
+.cinta{position:absolute;top:-12px;left:50%;width:84px;height:24px;margin-left:-42px;background:rgba(228,232,200,.85);transform:rotate(3deg)}
+@keyframes flota{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(-2deg) translateY(-8px)}}
+.sticker{position:absolute;right:-26px;bottom:30px;background:var(--lz);color:var(--tx);font-family:"Arial Black",Arial;font-size:14px;padding:8px 12px;border-radius:10px;border:2px solid var(--tx);transform:rotate(8deg);animation:pega .5s 1s cubic-bezier(.2,1.6,.4,1) both;white-space:nowrap}
+@keyframes pega{from{transform:rotate(8deg) scale(0)}to{transform:rotate(8deg) scale(1)}}
+.marq{position:relative;z-index:2;margin-top:-26px;background:var(--lz);transform:rotate(-2.5deg);padding:10px 0;overflow:hidden;white-space:nowrap;box-shadow:0 6px 14px rgba(0,0,0,.12)}
+.marq div{display:inline-block;animation:corre 18s linear infinite;font-family:"Arial Black",Arial;font-size:14px;color:var(--am);letter-spacing:.06em}
+@keyframes corre{to{transform:translateX(-50%)}}
+.w{max-width:480px;margin:0 auto;padding:30px 16px 48px}
+mark{background:linear-gradient(transparent 55%,var(--lz) 55%);color:inherit;padding:0 2px}
+.firma{margin-top:26px;text-align:center;font-family:"Arial Black",Arial;color:var(--am)}
+.ent{opacity:0;animation:sube .7s cubic-bezier(.2,.8,.2,1) forwards}@keyframes sube{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important}}

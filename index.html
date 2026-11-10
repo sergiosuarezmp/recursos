@@ -1,31 +1,56 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Sergio Suárez · Recursos gratis</title>
 <style>
-:root{--am:#5A5D2F;--neg:#FFFFFF;--gr:#F3F4EA;--tx:#2C2F14;--su:#6b6d55;--ac:#878B4D}
-*{box-sizing:border-box}body{margin:0;background:var(--neg);color:var(--tx);font-family:Arimo,Helvetica,Arial,sans-serif}
-.w{max-width:480px;margin:0 auto;padding:32px 16px 48px;text-align:center}
-img.f{width:112px;height:112px;border-radius:50%;border:3px solid var(--am);object-fit:cover}
-h1{font-family:"Arial Black",Arial,sans-serif;font-size:28px;margin:14px 0 4px}h1 span{color:var(--am)}
-.sub{color:var(--su);font-size:15px;line-height:1.45;margin:0 0 18px}
-.datos{display:flex;gap:8px;justify-content:center;margin:0 0 26px}.datos div{background:var(--gr);border-radius:12px;padding:10px 8px;flex:1}
-.datos b{display:block;font-family:"Arial Black",Arial;color:var(--am);font-size:18px}.datos small{color:var(--su);font-size:11.5px}
-a.card{display:block;text-decoration:none;color:var(--tx);background:var(--gr);border:1px solid #E3E5D2;border-radius:16px;padding:18px;margin:0 0 12px;text-align:left}
-a.card.top{background:var(--am);color:#fff;border:0}
-.card .e{font-size:26px;float:left;margin-right:12px}.card b{font-family:"Arial Black",Arial;font-size:17px;display:block}.card small{font-size:13.5px;opacity:.8}
-.firma{margin-top:26px;font-family:"Arial Black",Arial;color:var(--am)}
-
-.ent{opacity:0;animation:sube .6s cubic-bezier(.2,.8,.2,1) forwards}
-@keyframes sube{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-a.card{transition:transform .2s,box-shadow .2s}a.card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(44,47,20,.15)}
-a.card.top{animation:sube .6s cubic-bezier(.2,.8,.2,1) forwards,late 2.4s 1.6s ease-in-out infinite}
-@keyframes late{0%,100%{transform:scale(1)}8%{transform:scale(1.035)}16%{transform:scale(1)}}
-@media (prefers-reduced-motion:reduce){.ent,a.card.top{animation:none;opacity:1}}
-</style></head><body><div class="w">
-<img class="f" src="perfil.jpg" alt="Sergio Suárez">
-<h1>Hola, soy <span>Sergio</span> 👋</h1>
-<p class="sub">Te ayudo a crear contenido para tu marca personal, desde cero y paso a paso.<br>Aquí tienes todo lo que uso, gratis.</p>
-<div class="datos"><div><b data-n="937" data-suf=" mil">937 mil</b><small>visitas en mi reel viral</small></div><div><b data-n="1.9" data-d="1" data-suf=" M">1,9 M</b><small>visitas de un cliente en 30 días</small></div><div><b data-n="11" data-pre="+" data-suf=" años">+11 años</b><small>creando contenido</small></div></div>
-<a class="card top" href="biblioteca/?de=bio"><span class="e">📚</span><b>Mi biblioteca gratis</b><small>Guías de hooks, guiones, bio, ideas y algoritmo</small></a>
-<a class="card" href="https://www.youtube.com/playlist?list=PL8ovHpvOz4dV_n8ylcKnlSpse8P7zxPI8"><span class="e">▶️</span><b>Curso gratis en YouTube</b><small>19 vídeos para empezar en Instagram</small></a>
+:root{--am:#5A5D2F;--neg:#FFFFFF;--gr:#F3F4EA;--tx:#2C2F14;--su:#6b6d55;--ac:#878B4D;--cl:#A8B26B;--cr:#F7F6EE}
+*{box-sizing:border-box}body{margin:0;background:var(--cr);color:var(--tx);font-family:Arimo,Helvetica,Arial,sans-serif;overflow-x:hidden}
+.hero{position:relative;background:var(--am);padding:34px 16px 70px;text-align:center;overflow:hidden}
+.top{display:flex;justify-content:space-between;max-width:480px;margin:0 auto 22px;color:#E4E8C8;font-family:"Arial Black",Arial;font-size:12px;letter-spacing:.08em}
+.estrella{position:absolute;right:-40px;top:40px;width:190px;height:190px;opacity:.35;animation:gira 22s linear infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+.pol{position:relative;display:inline-block;background:#fff;padding:12px 12px 46px;border-radius:6px;box-shadow:0 18px 40px rgba(0,0,0,.35);transform:rotate(-4deg);animation:flota 5s ease-in-out infinite}
+.pol img{display:block;width:230px;height:250px;object-fit:cover;border-radius:3px}
+.pol .pie{position:absolute;left:0;right:0;bottom:12px;font-family:"Arial Black",Arial;font-size:15px;color:var(--tx)}
+.cinta{position:absolute;top:-12px;left:50%;width:90px;height:26px;margin-left:-45px;background:rgba(228,232,200,.85);transform:rotate(3deg)}
+@keyframes flota{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(-2deg) translateY(-8px)}}
+.sticker{position:absolute;right:-30px;bottom:66px;background:#E4E8C8;color:var(--tx);font-family:"Arial Black",Arial;font-size:14px;padding:8px 12px;border-radius:10px;border:2px solid var(--tx);transform:rotate(8deg);animation:pega .5s 1.2s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes pega{from{transform:rotate(8deg) scale(0)}to{transform:rotate(8deg) scale(1)}}
+.marq{position:relative;z-index:2;margin-top:-28px;background:#E4E8C8;transform:rotate(-2.5deg);padding:10px 0;overflow:hidden;white-space:nowrap;box-shadow:0 6px 14px rgba(0,0,0,.12)}
+.marq div{display:inline-block;animation:corre 18s linear infinite;font-family:"Arial Black",Arial;font-size:14px;color:var(--am);letter-spacing:.06em}
+@keyframes corre{to{transform:translateX(-50%)}}
+.w{max-width:480px;margin:0 auto;padding:34px 16px 48px}
+.hola{font-family:Georgia,serif;font-style:italic;color:var(--ac);font-size:22px}
+h1{font-family:"Arial Black",Arial;font-size:44px;line-height:1;margin:4px 0 14px}h1 span{color:var(--am);font-family:Georgia,serif;font-style:italic;font-weight:700}
+.sub{color:var(--su);font-size:16px;line-height:1.5;margin:0 0 18px}
+mark{background:linear-gradient(transparent 55%,#E4E8C8 55%);color:inherit;padding:0 2px}
+.datos{display:flex;gap:8px;margin:0 0 26px}.datos div{background:#fff;border-radius:14px;padding:12px 8px;flex:1;text-align:center;box-shadow:0 6px 16px rgba(44,47,20,.08)}
+.datos b{display:block;font-family:Georgia,serif;color:var(--am);font-size:24px}.datos small{color:var(--su);font-size:11.5px}
+a.card{display:block;text-decoration:none;color:#fff;background:var(--am);border-radius:22px;padding:22px;margin:0 0 14px;box-shadow:0 12px 26px rgba(44,47,20,.18);transition:transform .2s}
+a.card:hover{transform:translateY(-3px)}
+.fan{position:relative;height:120px;margin:-6px 0 12px}.fan span{position:absolute;left:50%;top:6px;width:96px;height:112px;background:#fff;border-radius:8px;box-shadow:0 6px 14px rgba(0,0,0,.2);color:var(--tx);font-family:"Arial Black",Arial;font-size:11px;padding:10px;text-align:left;transition:transform .3s}
+.fan span:nth-child(1){transform:translateX(-140%) rotate(-10deg)}.fan span:nth-child(2){transform:translateX(-50%) rotate(-2deg);z-index:2}.fan span:nth-child(3){transform:translateX(40%) rotate(9deg)}
+a.card:hover .fan span:nth-child(1){transform:translateX(-160%) rotate(-14deg)}a.card:hover .fan span:nth-child(3){transform:translateX(60%) rotate(13deg)}
+.fan em{display:block;font-family:Georgia,serif;font-style:italic;color:var(--am);font-size:13px;margin-top:4px}
+.tag{display:inline-block;background:#E4E8C8;color:var(--tx);font-family:"Arial Black",Arial;font-size:11px;padding:5px 10px;border-radius:999px;letter-spacing:.05em}
+.card h2{font-family:"Arial Black",Arial;font-size:24px;margin:10px 0 6px}.card h2 i{font-family:Georgia,serif;color:#E4E8C8}
+.card p{margin:0 0 12px;opacity:.85;line-height:1.45}.card .ir{font-family:"Arial Black",Arial;color:#E4E8C8}
+a.card.yt{background:#fff;color:var(--tx)}a.card.yt .ir{color:var(--am)}
+.firma{margin-top:26px;text-align:center;font-family:"Arial Black",Arial;color:var(--am)}
+.ent{opacity:0;animation:sube .7s cubic-bezier(.2,.8,.2,1) forwards}@keyframes sube{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important}}
+</style></head><body>
+<section class="hero">
+<div class="top"><span>SERGIO SUÁREZ</span><span>@SERGIOSUAREZMP</span></div>
+<svg class="estrella" viewBox="0 0 100 100"><path d="M50 4 61 38 97 38 68 59 79 94 50 72 21 94 32 59 3 38 39 38Z" fill="none" stroke="#E4E8C8" stroke-width="1.5"/></svg>
+<div class="pol"><span class="cinta"></span><img src="perfil.jpg" alt="Sergio Suárez"><div class="pie">Si yo puedo, tú puedes ✌️</div><div class="sticker">937K visitas 🔥</div></div>
+</section>
+<div class="marq"><div>CLUB DESDE CERO ★ CONTENIDO SIN MIEDO ★ SI YO PUEDO, TÚ PUEDES ★ MARCA PERSONAL ★ GUÍAS GRATIS ★ CLUB DESDE CERO ★ CONTENIDO SIN MIEDO ★ SI YO PUEDO, TÚ PUEDES ★ MARCA PERSONAL ★ GUÍAS GRATIS ★&nbsp;</div></div>
+<div class="w">
+<div class="hola">hola 👋</div>
+<h1>Soy <span>Sergio</span></h1>
+<p class="sub">Te ayudo a crear contenido para tu marca personal, <mark>desde cero y paso a paso</mark>. Aquí tienes todo lo que uso, gratis.</p>
+<div class="datos"><div><b data-n="937" data-suf="K">937K</b><small>visitas en mi reel viral</small></div><div><b data-n="1.9" data-d="1" data-suf=" M">1,9 M</b><small>visitas de un cliente en 30 días</small></div><div><b data-n="11" data-pre="+" data-suf=" años">+11 años</b><small>creando contenido</small></div></div>
+<a class="card" href="biblioteca/?de=bio"><div class="fan"><span>100 hooks<em>que funcionan</em></span><span>Guion viral<em>en 2 páginas</em></span><span>Baúl de ideas<em>infinitas</em></span></div>
+<span class="tag">GRATIS</span><h2>Mi biblioteca <i>de guías</i></h2><p>Hooks, guiones, bio, ideas y algoritmo. Elige la tuya y te llega al momento.</p><span class="ir">Entrar →</span></a>
+<a class="card yt" href="https://www.youtube.com/playlist?list=PL8ovHpvOz4dV_n8ylcKnlSpse8P7zxPI8"><span class="tag">YOUTUBE</span><h2>Curso gratis</h2><p>19 vídeos para empezar en Instagram desde cero.</p><span class="ir">Verlo →</span></a>
 <p class="firma">Si yo puedo, tú puedes.</p>
 </div><script src="anim.js"></script></body></html>

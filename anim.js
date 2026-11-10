@@ -1,7 +1,7 @@
 // Animaciones de la web: entrada escalonada, contadores y latido. ?t=ms congela en ese instante (para grabar la vista previa).
 (function(){
   var T=new URLSearchParams(location.search).get('t');
-  var els=document.querySelectorAll('.w > *, .w .datos > div');
+  var els=document.querySelectorAll('.w > *, .w .datos > div, .pol');
   els.forEach(function(e,i){e.classList.add('ent');e.style.animationDelay=(i*90)+'ms'});
   function cuenta(p){document.querySelectorAll('[data-n]').forEach(function(b){
     var n=parseFloat(b.dataset.n),d=b.dataset.d||0,v=n*(1-Math.pow(1-Math.min(p,1),3));

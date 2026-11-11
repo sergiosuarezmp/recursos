@@ -107,7 +107,7 @@ a.card:hover .minis span{transform:translateY(-4px)}a.card:hover .minis span i{t
 .cli .res{display:flex;align-items:center;gap:8px;margin:12px 0}.cli .res div{flex:1;background:var(--cr);border-radius:12px;padding:8px 10px;text-align:center}
 .cli .res b{display:block;font:900 22px "Arial Black",Arial;color:var(--am)}.cli .res small{font-size:11px;color:var(--su)}
 .cli .res .ant b{color:#9a9c86}.cli .res .fl{font:900 20px Arial;color:var(--am)}
-.pruebas{display:flex;gap:8px}.pruebas figure{flex:1;margin:0;position:relative}.pruebas img{width:100%;height:170px;object-fit:cover;object-position:top;border-radius:10px;display:block;cursor:zoom-in}
+.pruebas{display:flex;gap:8px}.pruebas figure{flex:1;margin:0;position:relative}.pruebas img{width:100%;height:210px;object-fit:cover;object-position:top;border-radius:10px;display:block;cursor:zoom-in}
 .pruebas figcaption{position:absolute;top:6px;left:6px;background:rgba(0,0,0,.6);color:#fff;font:700 10px Arial;padding:3px 6px;border-radius:5px}
 .pruebas figure.desp figcaption{background:var(--am)}
 .cita{margin:12px 0 0;font-family:Georgia,serif;font-style:italic;color:var(--tx);border-left:3px solid var(--cl);padding-left:10px}
@@ -136,14 +136,14 @@ a.card:hover .minis span{transform:translateY(-4px)}a.card:hover .minis span i{t
 <section class="test"><div class="hola">resultados reales 📈</div><h2>Lo que han conseguido <i>mis clientes</i></h2><p class="s">Negocios normales, sin anuncios. Las capturas son de sus estadísticas.</p>
 <div class="cli"><div class="cab"><img src="clientes/cbs-perfil.jpg" alt=""><div><b>Costa Blanca Stories</b><small>Inmobiliaria · primer mes juntos</small></div></div>
 <div class="res"><div class="ant"><b>~200</b><small>visitas por vídeo</small></div><span class="fl">→</span><div><b>2 M</b><small>visitas en menos de 30 días</small></div></div>
-<div class="pruebas"><figure><img src="clientes/cbs-antes.jpg" alt="Antes"><figcaption>ANTES</figcaption></figure><figure class="desp"><img src="clientes/cbs-despues.jpg" alt="Después"><figcaption>DESPUÉS</figcaption></figure></div></div>
+<div class="pruebas"><figure><img src="clientes/cbs-antes.jpg" alt="Antes"><figcaption>ANTES</figcaption></figure><figure class="desp"><img src="clientes/cbs-despues.jpg" style="object-position:50% 100%" alt="Después"><figcaption>DESPUÉS</figcaption></figure></div></div>
 <div class="cli"><div class="cab"><img src="clientes/manuel-perfil.jpg" alt=""><div><b>Manuel Castillo</b><small>@manuelcastillo.ceo · negocios digitales</small></div></div>
 <div class="res"><div class="ant"><b>~200</b><small>personas veían cada vídeo</small></div><span class="fl">→</span><div><b>+685</b><small>seguidores con un solo vídeo de 60K visitas</small></div></div>
-<div class="pruebas"><figure class="desp"><img src="clientes/manuel-despues.jpg" alt="Estadísticas del vídeo"><figcaption>UN VÍDEO</figcaption></figure><figure><img src="clientes/manuel-whatsapp.jpg" alt="Mensaje de Manuel"><figcaption>SU MENSAJE</figcaption></figure></div>
+<div class="pruebas"><figure class="desp"><img src="clientes/manuel-despues.jpg" style="object-position:50% 100%" alt="Estadísticas del vídeo"><figcaption>UN VÍDEO</figcaption></figure><figure><img src="clientes/manuel-whatsapp.jpg" style="object-position:50% 30%" alt="Mensaje de Manuel"><figcaption>SU MENSAJE</figcaption></figure></div>
 <p class="cita">«Brutal lo que has hecho en 3 semanas con mi cuenta.»</p></div>
 <div class="cli"><div class="cab"><img src="clientes/paverdi-perfil.jpg" alt=""><div><b>Paverdi</b><small>Cortinas y persianas</small></div></div>
 <div class="res"><div class="ant"><b>~200</b><small>visitas por vídeo</small></div><span class="fl">→</span><div><b>21,7K</b><small>visitas en un vídeo</small></div></div>
-<div class="pruebas"><figure><img src="clientes/paverdi-antes.jpg" alt="Antes"><figcaption>ANTES</figcaption></figure><figure class="desp"><img src="clientes/paverdi-despues.jpg" alt="Después"><figcaption>DESPUÉS</figcaption></figure></div></div>
+<div class="pruebas"><figure><img src="clientes/paverdi-antes.jpg" alt="Antes"><figcaption>ANTES</figcaption></figure><figure class="desp"><img src="clientes/paverdi-despues.jpg" style="object-position:50% 100%" alt="Después"><figcaption>DESPUÉS</figcaption></figure></div></div>
 </section>
 <div class="zoom" id="zoom"><img alt=""></div>
 <script>document.querySelectorAll(".pruebas img").forEach(function(i){i.onclick=function(){zoom.querySelector("img").src=i.src;zoom.classList.add("on")}});zoom.onclick=function(){zoom.classList.remove("on")}</script>

@@ -112,6 +112,12 @@ a.card:hover .minis span{transform:translateY(-4px)}a.card:hover .minis span i{t
 .pruebas figure.desp figcaption{background:var(--am)}
 .cita{margin:12px 0 0;font-family:Georgia,serif;font-style:italic;color:var(--tx);border-left:3px solid var(--cl);padding-left:10px}
 .zoom{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:30;padding:16px}.zoom.on{display:flex}.zoom img{max-width:100%;max-height:100%;border-radius:12px}
+.minis span{background:#fff!important;color:var(--tx)!important;justify-content:flex-start!important;padding:30px 9px 9px!important;text-align:left}
+.minis span:before{content:"";position:absolute;top:0;left:0;right:0;height:20px;border-radius:12px 12px 0 0;background:repeating-linear-gradient(135deg,#2c2f14 0 10px,#fff 10px 20px)}
+.minis span i{position:static!important;transform:none!important;width:auto!important;height:auto!important;background:none!important;font-size:24px!important;display:block!important;margin-bottom:4px}
+.minis span b{font:900 12px/1.15 "Arial Black",Arial}
+.minis span:after{content:"";position:absolute;left:9px;right:9px;bottom:30px;height:22px;background:repeating-linear-gradient(#E3E5D2 0 2px,transparent 2px 7px)}
+.minis em{top:auto!important;bottom:7px;right:auto!important;left:9px;background:var(--lz)!important;color:var(--am)!important}
 </style></head><body>
 <section class="hero rec">
 <div class="top"><span>SERGIO SUÁREZ</span><span>@SERGIOSUAREZMP</span></div>
@@ -147,7 +153,7 @@ a.card:hover .minis span{transform:translateY(-4px)}a.card:hover .minis span i{t
 </section>
 <div class="zoom" id="zoom"><img alt=""></div>
 <script>document.querySelectorAll(".pruebas img").forEach(function(i){i.onclick=function(){zoom.querySelector("img").src=i.src;zoom.classList.add("on")}});zoom.onclick=function(){zoom.classList.remove("on")}</script>
-<a class="card" href="biblioteca/?de=bio"><div class="minis"><span><i>▶</i>100 hooks<em>3 min</em></span><span><i>▶</i>Guion viral<em>2 min</em></span><span><i>▶</i>Baúl de ideas<em>10 min</em></span></div>
+<a class="card" href="biblioteca/?de=bio"><div class="minis"><span><i>🎣</i><b>100 hooks</b><em>PDF</em></span><span><i>✍️</i><b>Guion viral</b><em>PDF</em></span><span><i>💡</i><b>Baúl de ideas</b><em>PDF</em></span></div>
 <span class="tag">GRATIS</span><h2>Mi biblioteca <i>de guías</i></h2><p>Hooks, guiones, bio, ideas y algoritmo. Elige la tuya y te llega al momento.</p><span class="ir">Entrar →</span></a>
 <a class="card calcard" href="calculadora/?de=bio"><div class="minicalc"><div class="pant"><span data-n="87">87</span></div><div class="tec"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
 <span class="tag">NUEVO · IA</span><h2>La calculadora <i>viral</i></h2><p>Pega tu gancho y tu guion: la IA te dice si engancha y qué cambiar, antes de grabar.</p><span class="ir">Probarla →</span></a>

@@ -25,3 +25,28 @@ mark{background:linear-gradient(transparent 55%,var(--lz) 55%);color:inherit;pad
 .firma{margin-top:26px;text-align:center;font-family:"Arial Black",Arial;color:var(--am)}
 .ent{opacity:0;animation:sube .7s cubic-bezier(.2,.8,.2,1) forwards}@keyframes sube{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important}}
+/* ===== Modo grabación (común) ===== */
+.linea{position:relative;background:#1d1f10;padding:12px 0 14px;overflow:hidden}
+.pistas{display:flex;gap:4px;padding:0 10px;height:16px}.pistas i{flex:0 0 var(--w);border-radius:4px;background:linear-gradient(90deg,var(--ac),var(--cl));opacity:.85}
+.pistas i:nth-child(even){background:linear-gradient(90deg,#4b4f27,#6d7140)}
+.cabezal{position:absolute;top:4px;bottom:4px;left:calc(var(--p,0)*100%);width:2px;background:#ff3b30}
+.cabezal:before{content:"";position:absolute;top:-2px;left:-5px;border:6px solid transparent;border-top-color:#ff3b30}
+.subs{text-align:center;margin-top:10px;font:900 15px "Arial Black",Arial;letter-spacing:.04em;color:#fff;padding:0 12px}
+.subs span{opacity:.3;animation:palabra 6s infinite}.subs span.hl{color:var(--lz)}
+.subs span:nth-child(1){animation-delay:.25s}.subs span:nth-child(2){animation-delay:.5s}.subs span:nth-child(3){animation-delay:.75s}.subs span:nth-child(4){animation-delay:1s}.subs span:nth-child(5){animation-delay:1.25s}.subs span:nth-child(6){animation-delay:1.5s}.subs span:nth-child(7){animation-delay:1.75s}.subs span:nth-child(8){animation-delay:2s}.subs span:nth-child(9){animation-delay:2.25s}
+@keyframes palabra{0%,8%{opacity:.35;color:#fff}10%,70%{opacity:1;color:var(--lz)}85%,100%{opacity:.35;color:#fff}}
+.recbadge{display:inline-flex;gap:6px;align-items:center;background:rgba(0,0,0,.4);color:#fff;font:700 11px "Arial Black",Arial;letter-spacing:.08em;padding:5px 10px;border-radius:999px;margin-bottom:10px}
+.recbadge .punto,.punto{width:9px;height:9px;border-radius:50%;background:#ff3b30;animation:parpadeo 1s steps(1) infinite}@keyframes parpadeo{50%{opacity:.2}}
+.visorc{position:relative;display:inline-block;width:200px;aspect-ratio:9/13;border-radius:22px;background:linear-gradient(160deg,#6d7140,#2c2f14);box-shadow:0 20px 44px rgba(0,0,0,.4);color:#fff;text-align:left;padding:22px 18px;margin-top:12px;animation:entraMovil .9s cubic-bezier(.2,1.2,.3,1) both}
+@keyframes entraMovil{from{transform:translateY(40px) scale(.9);opacity:0}to{transform:none;opacity:1}}
+.visorc .esq{position:absolute;width:18px;height:18px;border:2.5px solid rgba(255,255,255,.85)}
+.visorc .esq.a{top:10px;left:10px;border-right:0;border-bottom:0}.visorc .esq.b{top:10px;right:10px;border-left:0;border-bottom:0}.visorc .esq.c{bottom:10px;left:10px;border-right:0;border-top:0}.visorc .esq.d{bottom:10px;right:10px;border-left:0;border-top:0}
+.visorc .ico{font-size:44px;margin-top:18px}.visorc b{display:block;font:900 19px/1.12 "Arial Black",Arial;margin:10px 0 6px}.visorc em{font-family:Georgia,serif;font-size:13px;color:var(--lz)}
+.visorc .rec{position:absolute;top:16px;left:50%;transform:translateX(-50%);display:flex;gap:5px;align-items:center;font:700 10px "Arial Black",Arial;background:rgba(0,0,0,.4);padding:4px 8px;border-radius:999px;white-space:nowrap}
+.visorc .play{position:absolute;bottom:18px;right:18px;width:38px;height:38px;border-radius:50%;background:#fff;color:var(--am);display:flex;align-items:center;justify-content:center;font-size:14px;animation:late2 2s infinite}
+@keyframes late2{50%{transform:scale(1.12)}}
+.subida{max-width:320px;margin:14px auto 0;background:rgba(0,0,0,.3);border-radius:12px;padding:10px 12px;color:#fff;text-align:left;font:700 13px Arial}
+.subida .barra{height:6px;border-radius:3px;background:rgba(255,255,255,.2);margin-top:7px;overflow:hidden}.subida .barra i{display:block;height:100%;width:0;background:var(--lz);animation:sube100 1.8s .3s cubic-bezier(.3,.8,.2,1) forwards}
+@keyframes sube100{to{width:100%}}
+.subida .t1{animation:fuera .1s 2.1s forwards}.subida .t2{display:none}
+@keyframes fuera{to{opacity:0;height:0;display:none}}

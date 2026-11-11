@@ -35,14 +35,21 @@ button{width:100%;margin-top:18px;padding:16px;border:0;border-radius:14px;backg
 .err{color:#9b3b2a;text-align:center;font-weight:700;margin:12px 0 0;min-height:1em}
 .usada{text-align:center}.usada a{color:var(--am);font-weight:700}
 .legal{font-size:11.5px;color:#9a9c86;text-align:center}.legal a{color:inherit}
+.curva{position:relative;max-width:340px;margin:14px auto 0;background:rgba(0,0,0,.25);border-radius:18px;padding:14px 14px 10px}
+.curva svg{width:100%;display:block}.curva .ejes{fill:none;stroke:rgba(255,255,255,.25);stroke-width:1.5}
+.curva .cv{fill:none;stroke:var(--lz);stroke-width:4;stroke-linecap:round;stroke-dasharray:400;stroke-dashoffset:400;animation:dibuja 2s .3s cubic-bezier(.3,.8,.2,1) forwards}
+.curva .pt{fill:#ff3b30;opacity:0;animation:aparece .3s 2.2s forwards}@keyframes dibuja{to{stroke-dashoffset:0}}@keyframes aparece{to{opacity:1}}
+.curva .nota{position:absolute;top:44px;right:22px;font:900 34px "Arial Black",Arial;color:#fff}.curva .nota small{font-size:14px;opacity:.7}
 </style></head><body>
 <section class="hero"><div class="top"><a href="../">← SERGIO SUÁREZ</a><span>LA CALCULADORA</span></div>
-<svg class="estrella" viewBox="0 0 100 100"><path d="M50 4 61 38 97 38 68 59 79 94 50 72 21 94 32 59 3 38 39 38Z" fill="none" stroke="#E4E8C8" stroke-width="1.5"/></svg>
+
 <div class="hola">antes de grabar 🎬</div><h1>La <span>calculadora</span> viral</h1>
 <p>¿Va a funcionar tu vídeo? Pégame tu gancho y tu guion y te digo, punto por punto, si engancha y qué cambiar.</p>
-<div class="calc"><div class="pant" id="pant">87</div><div class="tec"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sticker" style="right:-40px;bottom:-14px">¿viral? 🔥</div></div>
+<div class="curva"><div class="recbadge"><span class="punto"></span>ANALIZANDO RETENCIÓN</div>
+<svg viewBox="0 0 300 120"><path class="ejes" d="M10 10V110H290"/><path class="cv" d="M10 18 C40 22,55 40,80 46 S130 58,160 62 S230 70,290 74"/><circle class="pt" cx="290" cy="74" r="5"/></svg>
+<div class="nota">87<small>/100</small></div></div>
 </section>
-<div class="marq"><div>GANCHO ★ FILTRO 5/50 ★ ESTRUCTURA ★ RETENCIÓN ★ CTA ★ GANCHO ★ FILTRO 5/50 ★ ESTRUCTURA ★ RETENCIÓN ★ CTA ★&nbsp;</div></div>
+<div class="linea"><div class="pistas"><i style="--w:18%"></i><i style="--w:9%"></i><i style="--w:24%"></i><i style="--w:12%"></i><i style="--w:20%"></i><i style="--w:14%"></i></div><div class="cabezal"></div><div class="subs"><span>CONTENIDO</span> <span>DESDE</span> <span class="hl">CERO</span> <span>·</span> <span>PASO</span> <span>A</span> <span>PASO</span> <span>·</span> <span class="hl">GRATIS</span></div></div>
 <div class="w">
 <form id="f" class="paso"><h2>Tu <i>vídeo</i></h2><p class="s">Cuanto más concreto, mejor diagnóstico. <mark>Un análisis por cuenta</mark> ⭐</p>
 <label><b>1</b>TU INSTAGRAM</label><input name="ig" placeholder="@tucuenta" required>

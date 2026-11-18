@@ -20,7 +20,7 @@ h3{font-family:"Arial Black",Arial;font-size:21px;margin:28px 0 12px}h3 span{fon
 .paraq{background:var(--lz);border-radius:18px;padding:16px 18px;line-height:1.55}
 .otra{display:block;text-align:center;margin:22px 0 0;padding:15px;border-radius:14px;background:var(--am);color:#fff;text-decoration:none;font:900 16px "Arial Black",Arial;box-shadow:0 5px 0 var(--tx)}
 .firma{text-align:center;font-family:Georgia,serif;font-style:italic;color:var(--am);margin:26px 0 0}
-</style></head><body>
+</style><script src="px.js"></script></head><body>
 <div class="hero">
 <div class="etq"><span class="rec"><i></i>CLASE GRATUITA</span><span>MENOS DE 20 MIN</span></div>
 <h1>Cómo crear contenido <span>viral</span> desde cero</h1>
@@ -53,5 +53,6 @@ h3{font-family:"Arial Black",Arial;font-size:21px;margin:28px 0 12px}h3 span{fon
 try{if(/[?&]a=1/.test(location.search))localStorage.setItem("clase-ev","1")}catch(e){}var K="clase-ss";try{if(localStorage.getItem(K)&&!location.search.includes("otra"))location.replace("ver/")}catch(e){}
 f.addEventListener("submit",function(e){e.preventDefault();var b=f.querySelector("button");b.disabled=true;b.textContent="Abriendo la clase…";
  var d=new FormData();d.append("fields[email]",f.email.value);d.append("fields[name]",f.nombre.value);d.append("fields[guia]","clase-gratuita");d.append("ml-submit","1");d.append("anticsrf","true");
+ try{px("track","Lead")}catch(x){}
  fetch("https://assets.mailerlite.com/jsonp/2784457/forms/203759816502412715/subscribe",{method:"POST",body:d,mode:"no-cors"}).finally(function(){try{localStorage.setItem(K,"1");localStorage.setItem(K+"-n",f.nombre.value)}catch(x){}location.href="ver/"})});
 </script><script src="../anim.js"></script></body></html>

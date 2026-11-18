@@ -16,12 +16,12 @@ h3{font-family:"Arial Black",Arial;font-size:21px;margin:30px 0 12px}h3 span{fon
 .inc div{background:#fff;border-radius:16px;padding:14px 16px;box-shadow:0 6px 14px rgba(44,47,20,.07);line-height:1.45}
 details{background:#fff;border-radius:14px;padding:14px 16px;margin:0 0 10px;box-shadow:0 6px 14px rgba(44,47,20,.06)}summary{font-weight:700;cursor:pointer}details p{margin:8px 0 0;color:var(--su);line-height:1.5}
 .firma{text-align:center;font-family:Georgia,serif;font-style:italic;color:var(--am);margin:26px 0 0}
-</style></head><body>
+</style><script src="../px.js"></script></head><body>
 <div class="hero"><div class="hola" id="hola">¡Ya la tienes!</div><h1>Tu clase gratuita</h1><p>Mírala hasta el final: al acabar te cuento cómo seguir.</p></div>
 <div class="caja">
 <div class="video" id="video"><div class="pronto"><b>🎬</b>La clase se publica muy pronto.<br>Te aviso por email en cuanto esté.</div></div>
 
-<a class="cta" href="https://www.skool.com/club-desde-cero-1431/about">Entrar en Club Desde Cero →<small>La comunidad donde lo aplicamos juntos, paso a paso</small></a>
+<a class="cta" onclick="try{px('track','InitiateCheckout')}catch(e){}" href="https://www.skool.com/club-desde-cero-1431/about">Entrar en Club Desde Cero →<small>La comunidad donde lo aplicamos juntos, paso a paso</small></a>
 <div class="fund" id="fund"><div id="plz" style="display:none;font-weight:800;font-size:20px;margin-bottom:6px">🔥 Quedan <span id="plzn">10</span> de 10 plazas de fundador<div style="height:10px;border-radius:6px;background:rgba(44,47,20,.15);margin-top:8px;overflow:hidden"><div id="plzb" style="height:100%;width:100%;background:#5A5D2F;border-radius:6px"></div></div></div>👑 <b>Solo 10 plazas de fundador</b> a <b>14 €/mes</b> mientras sigas dentro (después, 29 €/mes). Incluyen la IA de Guiones Virales desde el primer día y una llamada 1 a 1 de 45 minutos conmigo.</div>
 
 <h3>Qué hay <span>dentro</span> del Club</h3>
@@ -37,7 +37,7 @@ details{background:#fff;border-radius:14px;padding:14px 16px;margin:0 0 10px;box
 <details><summary>¿Puedo darme de baja cuando quiera?</summary><p>Sí. Es un pago mensual y lo cancelas desde Skool cuando quieras.</p></details>
 <details><summary>¿Sirve si empiezo de cero?</summary><p>Sí. Está pensado justo para quien empieza: sin experiencia, sin equipo y con el móvil.</p></details>
 
-<a class="cta" href="https://www.skool.com/club-desde-cero-1431/about">Quiero entrar en el Club →</a>
+<a class="cta" onclick="try{px('track','InitiateCheckout')}catch(e){}" href="https://www.skool.com/club-desde-cero-1431/about">Quiero entrar en el Club →</a>
 <p class="firma">Si yo puedo, tú puedes.</p>
 </div>
 <script>
@@ -46,4 +46,4 @@ try{if(!localStorage.getItem("clase-ss")&&!location.search.includes("v"))locatio
 try{var n=localStorage.getItem("clase-ss-n");if(n)hola.textContent="¡Ya la tienes, "+n.split(" ")[0]+"!"}catch(e){}
 if(VIDEO){video.innerHTML='<button class="portada" aria-label="Ver la clase"><img src="portada.jpg" alt=""><span class="play">▶</span><span class="ver">Ver la clase · 30 min</span></button>';video.querySelector('.portada').onclick=function(){var EV=false;try{EV=localStorage.getItem("clase-ev")==="1"||/[?&]a=1/.test(location.search)}catch(e){}var SRC=(!EV&&new Date()<new Date("2026-11-23T00:00:00+01:00"))?"clase.mp4":"clase-evergreen.mp4";video.innerHTML='<video src="https://video.sergiosuarezmp.com/'+SRC+'" poster="portada.jpg" controls autoplay playsinline preload="metadata" controlsList="nodownload" style="position:absolute;inset:0;width:100%;height:100%;background:#000"></video>';var v=video.querySelector('video'),max=0;try{max=+localStorage.getItem('max-'+SRC)||0}catch(e){}v.addEventListener('loadedmetadata',function(){if(max>5&&max<v.duration-5)v.currentTime=max});v.addEventListener('timeupdate',function(){if(!v.seeking&&v.currentTime>max&&v.currentTime-max<2){max=v.currentTime;try{localStorage.setItem('max-'+SRC,max)}catch(e){}}});v.addEventListener('seeking',function(){if(v.currentTime>max+1)v.currentTime=max});v.playbackRate=1;v.addEventListener('ratechange',function(){if(v.playbackRate>1)v.playbackRate=1})}}
 if(new Date()>new Date("2026-11-23T00:00:00+01:00"))fund.style.display="none";
-</script><script src="../../anim.js"></script><script>fetch("https://guias.sergiosuarezmp.com/api/plazas").then(r=>r.json()).then(d=>{if(d.quedan==null)return;var p=document.getElementById("plz");p.style.display="block";if(d.quedan<=0){p.innerHTML="❌ Plazas de fundador agotadas";return}document.getElementById("plzn").textContent=d.quedan;document.getElementById("plzb").style.width=(d.quedan*10)+"%"}).catch(function(){})</script></body></html>
+</script><script src="../../anim.js"></script><script>fetch("https://guias.sergiosuarezmp.com/api/plazas").then(r=>r.json()).then(d=>{if(d.quedan==null)return;var p=document.getElementById("plz");p.style.display="block";if(d.quedan<=0){p.innerHTML="❌ Plazas de fundador agotadas";return}document.getElementById("plzn").textContent=d.quedan;document.getElementById("plzb").style.width=(d.quedan*10)+"%"}).catch(function(){})</script><script>try{px("track","ViewContent")}catch(e){}</script></body></html>

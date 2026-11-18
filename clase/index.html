@@ -53,6 +53,6 @@ h3{font-family:"Arial Black",Arial;font-size:21px;margin:28px 0 12px}h3 span{fon
 try{if(/[?&]a=1/.test(location.search))localStorage.setItem("clase-ev","1")}catch(e){}var K="clase-ss";try{if(localStorage.getItem(K)&&!location.search.includes("otra"))location.replace("ver/")}catch(e){}
 f.addEventListener("submit",function(e){e.preventDefault();var b=f.querySelector("button");b.disabled=true;b.textContent="Abriendo la clase…";
  var d=new FormData();d.append("fields[email]",f.email.value);d.append("fields[name]",f.nombre.value);d.append("fields[guia]","clase-gratuita");d.append("ml-submit","1");d.append("anticsrf","true");
- try{px("track","Lead")}catch(x){}
+ try{px("track","Lead");px("track","CompleteRegistration")}catch(x){}
  fetch("https://assets.mailerlite.com/jsonp/2784457/forms/203759816502412715/subscribe",{method:"POST",body:d,mode:"no-cors"}).finally(function(){try{localStorage.setItem(K,"1");localStorage.setItem(K+"-n",f.nombre.value)}catch(x){}location.href="ver/"})});
 </script><script src="../anim.js"></script></body></html>
